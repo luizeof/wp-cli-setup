@@ -43,3 +43,10 @@ rm -rf /var/www/wp-completion.bash
 curl -o /var/www/wp-completion.bash https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
 source /var/www/wp-completion.bash
 ```
+
+## Baixando o Wrapper
+
+```bash
+curl -o /usr/local/bin/wp https://raw.githubusercontent.com/luizeof/wp-cli-setup/master/wp.sh
+chmod +x /usr/local/bin/wp
+```
