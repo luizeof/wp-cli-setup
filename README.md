@@ -36,7 +36,7 @@ curl -o /var/www/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-
 chmod +x /var/www/wp-cli.phar
 ```
 
-### Instalando o auto comletar
+### Instalando o auto completar
 
 ```bash
 rm -rf /var/www/wp-completion.bash
