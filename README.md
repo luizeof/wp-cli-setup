@@ -35,3 +35,11 @@ rm -f /var/www/wp-cli.phar
 curl -o /var/www/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x /var/www/wp-cli.phar
 ```
+
+### Instalando o auto comletar
+
+```bash
+rm -rf /var/www/wp-completion.bash
+curl -o /var/www/wp-completion.bash https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
+source /var/www/wp-completion.bash
+```
