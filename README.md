@@ -15,4 +15,16 @@ mkdir -p /var/www/.wp-cli/cache/
 chown -R www-data:www-data /var/www/.wp-cli/cache/
 ```
 
-## Preparando o iretório de Packages
+## Preparando o diretório de Packages
+
+```bash
+rm -rf var/www/.wp-cli/packages/
+mkdir -p var/www/.wp-cli/packages/
+chown -R www-data:www-data var/www/.wp-cli/packages/
+```
+
+# Remove alguma versão anterior
+
+```bash
+rm -f /var/www/wp-cli.phar
+```
