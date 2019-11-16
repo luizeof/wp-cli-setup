@@ -1,16 +1,16 @@
 # Setup wp-cli
 echo "Setting up wp-cli..."
 
-apt-get install -y sudo curl git
+apt-get install -y sudo curl git mariadb-client
 
 rm -rf /var/www/.wp-cli/
-mkdir -p $WP_CLI_CACHE_DIR
-chown -R www-data:www-data $WP_CLI_CACHE_DIR
+mkdir -p /var/www/.wp-cli/cache/
+chown -R www-data:www-data /var/www/.wp-cli/cache/
 
 
-rm -rf $WP_CLI_PACKAGES_DIR
-mkdir -p $WP_CLI_PACKAGES_DIR
-chown -R www-data:www-data $WP_CLI_PACKAGES_DIR
+rm -rf var/www/.wp-cli/packages/
+mkdir -p var/www/.wp-cli/packages/
+chown -R www-data:www-data var/www/.wp-cli/packages/
 
 rm -f /var/www/wp-cli.phar
 
@@ -21,6 +21,7 @@ rm -rf /var/www/wp-completion.bash
 curl -o /var/www/wp-completion.bash https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash
 source /var/www/wp-completion.bash
 
-curl -o /usr/local/bin/wp
+curl -o /usr/local/bin/wp https://raw.githubusercontent.com/luizeof/wp-cli-setup/master/wp.sh
+chmod +x /usr/local/bin/wp
 
 echo "Done"
