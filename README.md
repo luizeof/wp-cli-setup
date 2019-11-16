@@ -23,8 +23,15 @@ mkdir -p var/www/.wp-cli/packages/
 chown -R www-data:www-data var/www/.wp-cli/packages/
 ```
 
-# Remove alguma versão anterior
+## Remove alguma versão anterior
 
 ```bash
 rm -f /var/www/wp-cli.phar
+```
+
+## Baixando o wp-cli
+
+```bash
+curl -o /var/www/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x /var/www/wp-cli.phar
 ```
